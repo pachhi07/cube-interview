@@ -65,7 +65,7 @@ video {
   --title-color: #032e15;
   --primary: #355e3b;
   --dark-green: #0a3d15;
-    --stats-color :#2d634c;
+  --stats-color: #2d634c;
   --title: #1a1a1a;
   --white: #ffffff;
   --ash: #444;
@@ -181,7 +181,7 @@ button a {
   display: inline;
 }
 .hero_content h1 {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 .stats {
   display: flex;
@@ -219,14 +219,14 @@ button a {
     padding: 15px 20px;
   }
   .logo {
-  font-size: var(--step-9);
+    font-size: var(--step-9);
     font-weight: bold;
     flex: 1;
     text-align: left;
   }
   .hamburger {
     display: block;
-  font-size: var(--step-9);
+    font-size: var(--step-9);
     cursor: pointer;
   }
   .nav_container {
@@ -268,7 +268,6 @@ button a {
   }
   .badge {
     font-size: var(--step--5) !important;
-
   }
   .hero_content h1 {
     margin: 0;
@@ -342,112 +341,42 @@ button a {
 }
 
 /* Ingredients section */
-.ingredients {
-  padding: 60px 0;
-  background: white;
-}
 
-.ingredients_grid {
-  display: grid;
-  grid-template-columns: 45% 50%;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.ingredients_text .subtitle {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--primary);
-  font-size: var(--step-4) !important;
-  margin-bottom: 10px;
-  font-weight: 300;
-}
-
-.ingredients_text h2 {
-  width: 84%;
-}
-
-.ingredients_text p {
-  width: 80%;
-}
-
-/* Circle layout */
-.circle {
-  position: relative;
-  width: 600px;
-  height: 600px;
-  margin: 0 auto;
-  background-image: url("assets/ingredients-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.circle_border {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border: 2px solid #3b7d3a;
   border-radius: 50%;
-  z-index: 0;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.perfume {
-  width: 600px;
-  height: 600px;
+.dot_label {
+  width: 500px;
+  height: 500px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-}
-
-/* Ingredient dots */
-.ingredient {
-  position: absolute;
+  top: 45%;
+  left: -10%;
+  transform: rotate(calc(40deg * var(--i))) translate(270px) rotate(calc(-40deg * var(--i)));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  font-size: calc(var(--step-5) + var(--step--6));
-  /* border: 2px solid red; */
-  color: #1b4f38;
-  transform: translate(-50%, -10%);
 }
 
-.ingredient span {
-  display: block;
-  font-size: var(--step--3);
-  margin-top: 4px;
-  color: #555;
+.dot_label img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 4px;
 }
-@media (max-width: 768px) {
-  .ingredients_grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
-  .ingredients_text {
-    text-align: center;
-    width: 100%;
-    padding: 0 20px;
-  }
-  .ingredients_text h2,
-  .ingredients_text p {
-    width: 100%;
-    text-align: center;
-  }
-  .circle {
-    width: fit-content;
-    height: 380px;
-    aspect-ratio: 1 / 1;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-  }
-  .perfume {
-    width: fit-content;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .ingredient {
-    /* display: none; */
-  }
+
+.dot_label span {
+  font-size: 12px;
+  color: #1c1c1c;
+  /* border: 2px solid red; */
 }
 
 /* product section */
