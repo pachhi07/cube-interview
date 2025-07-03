@@ -882,12 +882,16 @@ text-align: center;
 }
 
 /* Subscription section */
+.subscribe_section{
+  /* background-color: #8a7960; */
+}
 .subscribe_section {
   width: 90%;
   position: relative;
-  background-image: url("/assets/subscription-bg.png");
+  /* background-color: #8a7960; */
+  background-image: url("/assets/subscription-image.jpg");
   background-size: cover;
-  background-position: right center; /* updated */
+  background-position:right center;
   background-repeat: no-repeat;
   border-radius: 20px;
   margin: 60px auto;
