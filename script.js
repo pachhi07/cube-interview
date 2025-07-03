@@ -123,10 +123,20 @@ tDots.forEach((dot, i) => {
 //   Faqs section
 document.querySelectorAll(".faq_question").forEach((question) => {
   question.addEventListener("click", () => {
-    const item = question.parentElement;
-    item.classList.toggle("active");
+    const clickedItem = question.parentElement;
+
+    // Close all other items
+    document.querySelectorAll(".faq_item").forEach((item) => {
+      if (item !== clickedItem) {
+        item.classList.remove("active");
+      }
+    });
+
+    // Toggle clicked item
+    clickedItem.classList.toggle("active");
   });
 });
+
 
 //product
 const productGalleryImages = [
