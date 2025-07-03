@@ -69,6 +69,11 @@ video {
   --title: #1a1a1a;
   --white: #ffffff;
   --ash: #444;
+  --border: #b8b8b8;
+  --bg: #f9f9f9;
+  --table-color: #666666;
+  --btnbg: linear-gradient(270deg, #032e15 0%, #008236 51.92%, #00c950 100%);
+  --radio-text: #919798;
 }
 
 h1 {
@@ -84,7 +89,7 @@ h2 {
   color: var(--title-color);
 }
 p {
-  width: 60%;
+  /* width: 60%; */
   font-size: var(--step-1) !important;
   font-weight: 400;
   line-height: 1.3;
@@ -342,11 +347,12 @@ button a {
 
 /* Ingredients section */
 .container_ingredients {
-  display: flex;
+  display: grid;
+  grid-template-columns: 35% 45%;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0;
-  /* padding: 50px;
+  padding: 50px 0px;
+  /* 
       gap: 50px; */
   /* max-width: 1200px; */
   margin: auto;
@@ -369,6 +375,64 @@ button a {
   width: 80%;
   text-align: justify;
 }
+.flowers_circle_container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-image: url("/assets/ingredients-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.flowers_circle {
+  border: 2px solid var(--border);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+.flowers_icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  left: -55%;
+}
+.flowers_icon .flowers {
+  position: absolute;
+
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid var(--border);
+  transform: rotate(calc(360deg / 8 * var(--i)));
+  transform-origin: 240px;
+}
+.flowers_icon .flowers > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(-360deg / 8 * var(--i)));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flowers_icon img {
+  width: 300px;
+}
+.flowers_icon .flowers p {
+}
+
 .ingredients_visual {
   /* border: 2px solid red; */
   flex: 1;
@@ -439,25 +503,25 @@ button a {
     text-align: center;
   }
   .ingredients_visual {
-        padding: 120px 0px;
+    padding: 120px 0px;
     width: 100%;
-    height: 400px; 
-    position: relative; 
+    height: 400px;
+    position: relative;
     overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
-        aspect-ratio: 1;
+    aspect-ratio: 1;
   }
   .circle-bg {
     width: 100%;
     height: 100%;
-    background-size: contain; 
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
   .bottle {
-    height: 220px; 
+    height: 220px;
     z-index: 2;
   }
   .icon_flowersss {
@@ -470,54 +534,44 @@ button a {
 }
 
 /* product section */
-.container {
+
+.product_subscription {
+  margin-bottom: 30px;
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px 0;
-  gap: 40px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
-.left-column,
-.right-column {
-  flex: 1 1 400px;
+.product_subscription > section {
+  border-radius: 10px;
 }
-.slider {
-  position: relative;
-  text-align: center;
+.product_container {
+  display: grid;
+  grid-template-columns: 45% 50%;
+  justify-content: space-between;
 }
-.slider img {
+.product_active_image {
   width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
+  height: 500px;
+  object-fit: cover;
 }
-.slider-nav {
-  margin-top: 10px;
-}
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px;
-  background-color: #bbb;
-  display: inline-block;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.dot.active {
-  background-color: #003c1a;
-}
-.thumbnails {
+.product_thumbnails {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-  border: 2px solid red;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
 }
-.thumbnails img {
-  width: 80px;
-  height: 80px;
+.product_thumbnails img {
+  width: calc(25% - 15px);
+  height: auto;
+  aspect-ratio: 1/1;
   border-radius: 10px;
-  object-fit: cover;
-  cursor: pointer;
+}
+.product_details h2 {
+  margin-bottom: 0px;
+}
+.rating {
+  margin-bottom: 20px;
 }
 .rating .stars {
   color: #0a6d2f;
@@ -527,79 +581,143 @@ button a {
   font-size: 14px;
   color: #555;
 }
-.description {
-  margin: 10px 0 20px;
-}
-.radio-cards label {
-  display: block;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-.card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  position: relative;
-}
-.card-header {
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  background: #003c1a;
-  color: white;
-  padding: 3px 10px;
-  font-size: 12px;
-  border-radius: 5px;
-}
-.card-title {
-  font-weight: bold;
-  margin-bottom: 5px;
-  font-size: 16px;
-}
-.card-price {
-  font-size: 18px;
-  color: #003c1a;
-}
-.strike {
-  text-decoration: line-through;
-  color: #888;
-  margin-left: 5px;
-}
-.card-body {
-  margin-top: 15px;
-}
-.fragrance-options {
+
+.product_subs_title {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product_subs_title > div {
+  display: flex;
+  align-items: center;
   gap: 10px;
-  margin: 10px 0;
 }
-.fragrance-options img {
-  height: 60px;
-  border-radius: 5px;
+.popular {
+  background: var(--btnbg);
+  text-align: center;
+  padding: 10px 0px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 20px;
 }
-ul {
-  list-style: none;
-  padding: 0;
-  font-size: 14px;
+.product_subs_content {
+  padding: 20px 10px;
+  border: 2px solid var(--border);
 }
-.green {
-  color: #0a6d2f;
-  font-weight: bold;
+.product_subs_title h3 {
+  font-size: var(--step-4);
+  font-weight: 500;
 }
-.cta-button {
-  background: #003c1a;
-  color: white;
-  padding: 12px 25px;
-  font-size: 16px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-.hidden {
-  display: none;
+.product_subs_title {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 15px;
 }
 
+.product_choose {
+  margin-top: 20px;
+}
+.product_choose h3 {
+  font-size: var(--step-3);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.product_choose ul {
+  display: flex;
+  list-style: none;
+  gap: 2%;
+}
+.product_choose label {
+  color: var(--radio-text);
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+.product_choose label input {
+  accent-color: var(--ash);
+}
+.product_choose ul li {
+  width: 23%;
+  background: var(--bg);
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+.product_choose li img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 65%;
+  margin: 20px auto 20px;
+}
+
+.product_include {
+  margin-top: 20px;
+}
+.product_include h3 {
+  font-size: var(--step-3);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.product_include_items {
+  display: grid;
+  grid-template-columns: 25% 70%;
+  justify-content: space-between;
+}
+.product_include_items > section {
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 10px;
+}
+.product_include_days img {
+  width: 80%;
+  margin: 0 auto;
+}
+.product_include_free {
+  display: flex;
+  flex-direction: column;
+}
+.product_include_free div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  width: 85%;
+  margin: 0 auto;
+}
+.product_include_free img {
+  width: 25%;
+  height: auto;
+}
+.product_desc li {
+  font-size: var(--step-1);
+  font-weight: 400;
+  line-height: 1.3;
+  color: #848484;
+}
+
+.product_desc {
+  list-style: none;
+  margin-top: 20px;
+}
+.product_desc li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.product_desc li::before {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 17px;
+  background: url(/assets/fevcon.png);
+  background-size: cover;
+}
+
+.hidden .product_info {
+  display: none;
+}
 /* Ultimate Fragrance section */
 .special_edition {
   background: linear-gradient(to right, #0a3d15, #104726);
@@ -617,18 +735,19 @@ ul {
 .special_image {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  position: relative;
+  /* border: 2px solid red; */
+  /* overflow: hidden; */
+  /* position: relative; */
 }
 
 .special_image img {
-  position: absolute;
-  top: 50%;
-  left: 20%;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 20%; */
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
+  /* object-fit: cover; */
+  /* transform: translate(-50%, -50%);   */
 }
 
 .special_content h2 {
@@ -724,9 +843,9 @@ ul {
 .subscribe_section {
   width: 90%;
   position: relative;
-  background-image: url("/assets/subscription-image.jpg");
+  background-image: url("/assets/subscription-bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: right center; /* updated */
   background-repeat: no-repeat;
   border-radius: 20px;
   margin: 60px auto;
@@ -745,7 +864,7 @@ ul {
 
 .subscribe_container {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
   display: grid;
   grid-template-columns: 40% 70%;
   align-items: center;
@@ -759,11 +878,13 @@ ul {
 
 .subscribe_content h2 {
   width: 450px;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 20px;
   color: var(--white);
 }
-
+.subscribe_content p {
+  font-weight: 400;
+}
 .subscribe_image img {
   width: 180px;
   height: auto;
@@ -794,25 +915,18 @@ ul {
   .subscribe_section {
     width: 90%;
     padding: 30px 20px;
+    margin: 25px auto;
   }
-
   .subscribe_container {
     grid-template-columns: 100%;
   }
-
   .subscribe_content h2 {
     font-size: var(--step-1);
     width: 100%;
   }
-
   .subscribe_image {
     order: -1;
   }
-
-  .tag_group {
-    justify-content: center;
-  }
-
   .subscribe_image img {
     width: 140px;
     height: auto;
@@ -827,11 +941,8 @@ ul {
 .collection_grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 30px;
 }
-
 /* Accordion */
 .accordion_item {
   background: #fff;
@@ -866,21 +977,24 @@ ul {
 
 /* Carousel */
 .carousel {
-  flex: 1;
-  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: end;
+  width: 80%;
+  margin: 0 auto;
   position: relative;
-  max-width: 400px;
   border-radius: 16px;
-  overflow: hidden;
 }
 .carousel_images {
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: fit-content;
 }
 .carousel_img {
+  border-radius: 20px;
   display: none;
-  width: 100%;
-  height: auto;
 }
 .carousel_img.active {
   display: block;
@@ -888,7 +1002,8 @@ ul {
 .carousel_dots {
   text-align: center;
   padding: 10px 0;
-  background: #fff;
+  position: absolute;
+  bottom: 10px;
 }
 .dot {
   display: inline-block;
@@ -920,6 +1035,10 @@ ul {
   right: 10px;
 }
 @media (max-width: 768px) {
+  .collection_grid {
+    width: 100%;
+    /* border: 2px solid red; */
+  }
   .accordion h2 {
     text-align: center;
   }
@@ -931,17 +1050,13 @@ ul {
     flex-direction: column;
     gap: 20px;
   }
-
-  .accordion,
+  .accordion {
+    width: 100%;
+  }
   .carousel {
     width: 100%;
-    max-width: 100%;
-  }
-
-  .carousel {
     margin-top: 10px;
   }
-
   .arrow {
     top: 80%;
   }
@@ -968,6 +1083,7 @@ ul {
 .stat_box p {
   width: 90%;
   margin: 0 auto;
+  font-weight: 300;
   color: var(--white);
   font-size: var(--step--1);
 }
@@ -1022,14 +1138,16 @@ ul {
   border-bottom: 1px solid #ddd;
   font-size: var(-step--1);
 }
-
-.comparison_table thead th {
-  /* font-weight: bold; */
+.comparison_table th,
+.comparison_table td:nth-child(1) {
+  color: var(--table-color);
+  font-weight: 600;
 }
 
 .comparison_table img {
   width: 50px;
   height: 50px;
+  margin: 0 auto;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -1041,6 +1159,7 @@ ul {
   margin-top: 20px;
 }
 .highlight_col_names p {
+  font-size: var(--step--4) !important;
   margin-top: 20px;
 }
 .check {
@@ -1439,7 +1558,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 .contact_content {
   position: absolute;
@@ -1454,6 +1573,7 @@ ul {
 .contact_content h2 {
   color: var(--white);
   font-weight: 300;
+  margin-bottom: 25px;
 }
 .contact_content p {
   text-align: center;
@@ -1501,6 +1621,7 @@ input[type="email"]::placeholder {
 .footer_container {
   display: grid;
   grid-template-columns: 50% 50%;
+  width: 92%;
   margin: 0 auto;
 }
 .footer_logo {
@@ -1525,6 +1646,12 @@ input[type="email"]::placeholder {
 .footer_links li,
 .social_links li {
   margin-bottom: 10px;
+  padding: 5px 0;
+}
+.social_links li {
+  gap: 10px;
+  display: flex;
+  align-items: center;
 }
 .footer_links a {
   color: #ddd;

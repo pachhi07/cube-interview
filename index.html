@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -104,131 +104,111 @@
       </div>
 
       <!-- Right Content -->
-      <div class="ingredients_visual">
-        <div class="circle-bg"></div>
-        <img
-          src="assets/ingredients-bottle.png"
-          alt="Perfume Bottle"
-          class="bottle"
-        />
-        <div class="icon_flowers" style="top: 7%; left: 75%">
-     <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Jasmine</p></div>
-          <div class="dot_flower"></div>
+      <div class="flowers_circle_container">
+        <div class="flowers_circle">
+          <div class="flowers_icon">
+            <div class="flowers" style="--i: 1">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 2">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 3">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 4">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 5">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 6">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 7">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+            <div class="flowers" style="--i: 8">
+              <div>
+                <img src="assets/ingredients-bottle.png" alt="Perfume Bottle" />
+                <p>lilly</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="icon_flowers"
-          style="top: 50%; left: 100%; transform: translate(-50%, -50%)">
-             <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Vanilla</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        <div class="icon_flowers" style="top: 80%; left: 85%">
-           <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Lavender</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        <div
-          class="icon_flowers"
-          style="top: 100%; left: 50%; transform: translate(-50%, -50%)" >
-           <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Rose</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        <div class="icon_flowers" style="top: 80%; left: 15%">
-           <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Tulip</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        <div
-          class="icon_flowers"
-          style="top: 50%; left: 0%; transform: translate(-50%, -50%)">
-           <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Tulip</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        <div class="icon_flowers" style="top:5%; left: 15%">
-           <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Jasmin</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        <div
-          class="icon_flowers"
-          style="top: 5%; left: 50%; transform: translate(-50%, -50%)">
-           <span class="icon_ingredient">🌹</span>
-          <!-- <img src="assets/collections.jpg" /> -->
-          <div><p>Lilly</p></div>
-          <div class="dot_flower"></div>
-        </div>
-        
       </div>
     </div>
     <!-- ends -->
 
     <!-- fouth section -->
-    <div class="container width">
-      <div class="left-column ">
+    <div class="product_container width">
+      <div class="product_images">
         <div class="slider">
           <img
             id="main-image"
             src="assets/products/product-1.png"
             alt="Perfume"
+            class="product_active_image"
           />
-          <div class="slider-nav">
-            <span class="dot active" onclick="showSlide(0)"></span>
-            <span class="dot" onclick="showSlide(1)"></span>
-            <span class="dot" onclick="showSlide(2)"></span>
-            <span class="dot" onclick="showSlide(3)"></span>
-            <span class="dot" onclick="showSlide(4)"></span>
-            <span class="dot" onclick="showSlide(5)"></span>
-            <span class="dot" onclick="showSlide(6)"></span>
-            <span class="dot" onclick="showSlide(7)"></span>
-          </div>
         </div>
-        <div class="thumbnails">
+        <div class="product_thumbnails">
           <img
-            src="assets/products/sub-product-1.jpg?text=0"
-            onclick="changeMainImage(0)"
+            src="assets/products/sub-product-1.jpg"
+            onclick="changeMainImage('sub-product-1.jpg')"
           />
           <img
-            src="assets/products/sub-product-2.jpg?text=1"
-            onclick="changeMainImage(1)"
+            src="assets/products/sub-product-2.jpg"
+            onclick="changeMainImage('sub-product-2.jpg')"
           />
           <img
-            src="assets/products/sub-product-3.jpg?text=2"
-            onclick="changeMainImage(2)"
+            src="assets/products/sub-product-3.jpg"
+            onclick="changeMainImage('sub-product-3.jpg')"
           />
           <img
-            src="assets/products/sub-product-4.jpg?text=3"
-            onclick="changeMainImage(3)"
+            src="assets/products/sub-product-4.jpg"
+            onclick="changeMainImage('sub-product-4.jpg')"
           />
           <img
-            src="assets/products/sub-product-1.jpg?text=4"
-            onclick="changeMainImage(4)"
+            src="assets/products/sub-product-1.jpg"
+            onclick="changeMainImage('sub-product-1.jpg')"
           />
           <img
-            src="assets/products/sub-product-2.jpg?text=5"
-            onclick="changeMainImage(5)"
+            src="assets/products/sub-product-2.jpg"
+            onclick="changeMainImage('sub-product-2.jpg')"
           />
           <img
-            src="assets/products/sub-product-3.jpg?text=6"
-            onclick="changeMainImage(6)"
+            src="assets/products/sub-product-3.jpg"
+            onclick="changeMainImage('sub-product-3.jpg')"
           />
           <img
-            src="assets/products/sub-product-4.jpg?text=7"
-            onclick="changeMainImage(7)"
+            src="assets/products/sub-product-4.jpg"
+            onclick="changeMainImage('sub-product-4.jpg')"
           />
         </div>
       </div>
 
-      <div class="right-column">
+      <div class="product_details">
         <h2>GTG Perfumes</h2>
         <div class="rating">
           <span class="stars">★ ★ ★ ★ ★</span>
@@ -239,132 +219,257 @@
           every bottle of our fragrance.
         </p>
 
-        <div class="radio-cards">
+        <section class="product_subscription">
           <!-- single subscription -->
-          <label>
-            <input
-              type="radio"
-              name="plan"
-              checked
-              onchange="selectPlan('single')"
-            />
-            <div class="card">
-              <div class="card-header green">Most Popular</div>
-              <div class="card-title">Single Subscription</div>
-              <div class="card-price">
-                $99.99 <span class="strike">$146</span>
-              </div>
-              <div class="card-body" id="single">
-                <p><strong>Choose a Fragrance</strong></p>
-                <div class="fragrance-options">
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-1.jpg?text=O"
-                  /></label>
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-2.jpg?text=L"
-                  /></label>
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-3.jpg?text=R"
-                  /></label>
+          <section class="single_subscription hidden" id="single">
+            <section class="popular">Most Popular</section>
+            <section class="product_subs_content">
+              <label
+                class="product_subs_title"
+                onclick="handleProductContent('single')"
+              >
+                <div>
+                  <input type="radio" name="subscription" checked />
+                  <h3>Single Subscription</h3>
                 </div>
-                <p><strong>What's Included:</strong></p>
-                <ul>
-                  <li>1 Bottle Shipped Monthly</li>
-                  <li><span class="green">✔</span> Free Sampler</li>
-                  <li><span class="green">✔</span> 50% OFF Shipping</li>
-                  <li>
-                    <span class="green">✔</span> Cancel Anytime After 3 Months
-                  </li>
-                  <li>
-                    <span class="green">✔</span> 28 Day Money Back Guarantee
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </label>
+                <div>$99.99</div>
+              </label>
 
-          <!-- DOUBLE SUBSCRIPTION -->
-          <label>
-            <input type="radio" name="plan" onchange="selectPlan('double')" />
-            <div class="card">
-              <div class="card-title">Double Subscription</div>
-              <div class="card-price">
-                $169.99 <span class="strike">$246</span>
-              </div>
-              <div class="card-body hidden" id="double">
-                <p><strong>Choose 2 Fragrances</strong></p>
-                <div class="fragrance-options">
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-1.jpg?text=O"
-                  /></label>
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-2.jpg?text=L"
-                  /></label>
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-3.jpg?text=R"
-                  /></label>
+              <section class="product_info">
+                <section class="product_choose">
+                  <h3>Choose a Fragrance</h3>
+                  <ul>
+                    <li>
+                      <label>
+                        <input type="radio" name="plan" checked />
+                        Original
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Lily
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Original
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                  </ul>
+                </section>
+                <section class="product_include">
+                  <h3>What’s Included:</h3>
+                  <section class="product_include_items">
+                    <section class="product_include_days">
+                      <p>Every 30 Days</p>
+                      <img src="assets/ultimate-picture.png" />
+                    </section>
+                    <section class="product_include_free">
+                      <p>One Time <strong> (Free)</strong></p>
+                      <div>
+                        <img src="assets/ultimate-picture.png" />
+                        <img src="assets/ultimate-picture.png" />
+                        <img src="assets/ultimate-picture.png" />
+                      </div>
+                    </section>
+                  </section>
+                </section>
+                <ul class="product_desc">
+                  <li>1 bottle shipped monthly</li>
+                  <li>Free Sampler for original, lily and rose fragrances</li>
+                  <li>50% OFF Shipping</li>
+                  <li>Pause or Cancel Anytime after 3 months minimum</li>
+                  <li>28 Day Money Back Guarantee*</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+
+          <!-- single subscription -->
+          <section class="single_subscription hidden" id="double">
+            <section class="product_subs_content">
+              <label
+                class="product_subs_title"
+                onclick="handleProductContent('double')"
+              >
+                <div>
+                  <input type="radio" name="subscription" />
+                  <h3>Single Subscription</h3>
                 </div>
-                <p><strong>What's Included:</strong></p>
-                <ul>
-                  <li>2 Bottles Shipped Monthly</li>
-                  <li><span class="green">✔</span> 2 Free Samplers</li>
-                  <li><span class="green">✔</span> 60% OFF Shipping</li>
-                  <li>
-                    <span class="green">✔</span> Cancel Anytime After 3 Months
-                  </li>
-                  <li>
-                    <span class="green">✔</span> 30 Day Money Back Guarantee
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </label>
+                <div>$99.99</div>
+              </label>
 
-          <!-- TRY ONCE -->
-          <label>
-            <input type="radio" name="plan" onchange="selectPlan('try')" />
-            <div class="card">
-              <div class="card-title">Try Once</div>
-              <div class="card-price">
-                $129.99 <span class="strike">$146</span>
-              </div>
-              <div class="card-body hidden" id="try">
-                <p><strong>Choose a Fragrance</strong></p>
-                <div class="fragrance-options">
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-1.jpg?text=O"
-                  /></label>
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-2.jpg?text=L"
-                  /></label>
-                  <label
-                    ><input type="radio" name="fragrance" />
-                    <img src="assets/products/sub-product-3.jpg?text=R"
-                  /></label>
+              <section class="product_info">
+                <section class="product_choose">
+                  <h3>Choose a Fragrance</h3>
+                  <ul>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Original
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Lily
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Original
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                  </ul>
+                </section>
+                <section class="product_include">
+                  <h3>What’s Included:</h3>
+                  <section class="product_include_items">
+                    <section class="product_include_days">
+                      <p>Every 30 Days</p>
+                      <img src="assets/ultimate-picture.png" />
+                    </section>
+                    <section class="product_include_free">
+                      <p>One Time <strong> (Free)</strong></p>
+                      <div>
+                        <img src="assets/ultimate-picture.png" />
+                        <img src="assets/ultimate-picture.png" />
+                        <img src="assets/ultimate-picture.png" />
+                      </div>
+                    </section>
+                  </section>
+                </section>
+                <ul class="product_desc">
+                  <li>1 bottle shipped monthly</li>
+                  <li>Free Sampler for original, lily and rose fragrances</li>
+                  <li>50% OFF Shipping</li>
+                  <li>Pause or Cancel Anytime after 3 months minimum</li>
+                  <li>28 Day Money Back Guarantee*</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+
+          <!-- single subscription -->
+          <section class="single_subscription hidden" id="triple">
+            <section class="product_subs_content">
+              <label
+                class="product_subs_title"
+                onclick="handleProductContent('triple')"
+              >
+                <div>
+                  <input type="radio" name="subscription" />
+                  <h3>Single Subscription</h3>
                 </div>
-                <p><strong>What's Included:</strong></p>
-                <ul>
-                  <li>1 Full-Sized Bottle</li>
-                  <li><span class="green">✔</span> Free Sampler</li>
-                  <li><span class="green">✔</span> One-Time Delivery</li>
-                  <li>
-                    <span class="green">✔</span> 28 Day Money Back Guarantee
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </label>
-        </div>
+                <div>$99.99</div>
+              </label>
 
-        <button class="cta-button">Add to Cart</button>
+              <section class="product_info">
+                <section class="product_choose">
+                  <h3>Choose a Fragrance</h3>
+                  <ul>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Original
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Lily
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="plan"
+                          checked
+                          onchange="selectPlan('single')"
+                        />
+                        Original
+                      </label>
+                      <img src="assets/products/sub-product-1.jpg?text=0" />
+                    </li>
+                  </ul>
+                </section>
+                <section class="product_include">
+                  <h3>What’s Included:</h3>
+                  <section class="product_include_items">
+                    <section class="product_include_days">
+                      <p>Every 30 Days</p>
+                      <img src="assets/ultimate-picture.png" />
+                    </section>
+                    <section class="product_include_free">
+                      <p>One Time <strong> (Free)</strong></p>
+                      <div>
+                        <img src="assets/ultimate-picture.png" />
+                        <img src="assets/ultimate-picture.png" />
+                        <img src="assets/ultimate-picture.png" />
+                      </div>
+                    </section>
+                  </section>
+                </section>
+                <ul class="product_desc">
+                  <li>1 bottle shipped monthly</li>
+                  <li>Free Sampler for original, lily and rose fragrances</li>
+                  <li>50% OFF Shipping</li>
+                  <li>Pause or Cancel Anytime after 3 months minimum</li>
+                  <li>28 Day Money Back Guarantee*</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+        </section>
+
+        <!-- <button class="cta-button">Add to Cart</button> -->
       </div>
     </div>
     <!-- ends -->
@@ -373,7 +478,7 @@
     <section class="special_edition">
       <div class="special_grid width">
         <div class="special_image">
-          <img src="assets/ultimate-fragnace.png" alt="Perfume Bottle" />
+          <img src="assets/ultimate-picture.png" alt="Perfume Bottle" />
         </div>
         <div class="special_content">
           <h2>The Ultimate Fragrance</h2>
@@ -502,17 +607,17 @@
         <div class="carousel">
           <div class="carousel_images">
             <img
-              src="assets/collections.jpg"
+              src="assets/collections-one.png"
               class="carousel_img active"
               alt="Perfume Slide 1"
             />
             <img
-              src="assets/collections.jpg"
+                src="assets/collections-two.png"
               class="carousel_img"
               alt="Perfume Slide 2"
             />
             <img
-              src="assets/collections.jpg"
+              src="assets/collections-one.png"
               class="carousel_img"
               alt="Perfume Slide 3"
             />
@@ -567,15 +672,15 @@
               </th>
               <th class="highlight_col_names">
                 <img src="assets/products/sub-product-2.jpg" alt="Arose" />
-                <p>GTG</p>
+                <p>Arose</p>
               </th>
               <th class="highlight_col_names">
                 <img src="assets/products/sub-product-3.jpg" alt="Bella" />
-                <p>GTG</p>
+                <p>Bella</p>
               </th>
               <th class="highlight_col_names">
                 <img src="assets/products/sub-product-4.jpg" alt="Daisies" />
-                <p>GTG</p>
+                <p>Daises</p>
               </th>
             </tr>
           </thead>
@@ -860,47 +965,47 @@
     </section>
 
     <!-- footer starts -->
-    <footer class="footer ">
-  <div class="footer_main">
+    <footer class="footer">
+      <div class="footer_main">
         <h2 class="footer_logo">GTG</h2>
-      <div class="footer_container width">
-        <!-- Left Side -->
-        <div class="footer_left">
-          <div class="left_columns">
-            <ul class="footer_links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Fragrances</a></li>
-            </ul>
-            <ul class="footer_links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="social_links">
-              <li><i class="fab fa-facebook-f"></i> Facebook</li>
-              <li><i class="fab fa-instagram"></i> Instagram</li>
-              <li><i class="fab fa-x-twitter"></i>X Twitter</li>
-            </ul>
+        <div class="footer_container width">
+          <!-- Left Side -->
+          <div class="footer_left">
+            <div class="left_columns">
+              <ul class="footer_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Fragrances</a></li>
+              </ul>
+              <ul class="footer_links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <ul class="social_links">
+                <li><i class="fab fa-facebook-f"></i> Facebook</li>
+                <li><i class="fab fa-instagram"></i> Instagram</li>
+                <li><i class="">X</i>Twitter</li> <!-- twitter icon not importing -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div class="footer_right">
+            <p>
+              Join our newsletter to stay up to date on features and releases.
+            </p>
+            <form class="newsletter_form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit">Subscribe</button>
+            </form>
+            <small>
+              By subscribing you agree to our <a href="#">Privacy Policy</a> and
+              provide consent to receive updates from our company.
+            </small>
           </div>
         </div>
-
-        <!-- Right Side -->
-        <div class="footer_right">
-          <p>
-            Join our newsletter to stay up to date on features and releases.
-          </p>
-          <form class="newsletter_form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <small>
-            By subscribing you agree to our <a href="#">Privacy Policy</a> and
-            provide consent to receive updates from our company.
-          </small>
-        </div>
       </div>
-  </div>
     </footer>
     <!-- ends -->
     <script src="script.js"></script>
