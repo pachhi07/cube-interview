@@ -403,11 +403,11 @@ button a {
   align-items: center;
   cursor: pointer;
   /* top: -10px; */
-  left: -55%;
+  left: -64%;
 }
 .flowers_icon .flowers {
   position: absolute;
-  width: 20%;
+  width:0;
   height: 20%;
   border-radius: 50%;
   transition: 0.5s;
@@ -457,7 +457,7 @@ button a {
     width: 100px;
   }
   .flowers_icon {
-    top: -50px;
+    top: -25px;
     left: -150px;
     width: 100%;
   }
