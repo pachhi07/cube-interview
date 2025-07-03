@@ -162,17 +162,20 @@
     </div>
     <!-- ends -->
 
-    <!-- fouth section -->
+    <!-- Product section -->
     <div class="product_container width">
       <div class="product_images">
-        <div class="slider">
-          <img
-            id="main-image"
-            src="assets/products/product-1.png"
-            alt="Perfume"
-            class="product_active_image"
-          />
-        </div>
+        <h2>Choose Your Best GTG Fragrance</h2>
+<div class="slider">
+  <button class="arrow left" onclick="prevImage()">&#10094;</button>
+  <img
+    id="main-image"
+    src="assets/products/product-1.png"
+    alt="Perfume"
+    class="product_active_image"
+  />
+  <button class="arrow right" onclick="nextImage()">&#10095;</button>
+</div>
         <div class="product_thumbnails">
           <img
             src="assets/products/sub-product-1.jpg"
@@ -213,11 +216,10 @@
         <h2>GTG Perfumes</h2>
         <div class="rating">
           <span class="stars">★ ★ ★ ★ ★</span>
-          <span class="reviews">(1099+ reviews)</span>
+          <span class="reviews">4.7 (1099+ reviews)</span>
         </div>
         <p class="description">
-          Experience the timeless allure backed by modern artistry, captured in
-          every bottle of our fragrance.
+     Experience the timeless allure backed by modern artistry, captured in every bottle of our fragrance. Crafted for those who seek to elevate their essence with purpose and sophistication.
         </p>
 
         <section class="product_subscription">
@@ -229,16 +231,16 @@
                 class="product_subs_title"
                 onclick="handleProductContent('single')"
               >
-                <div>
+                <div class="product_items">
                   <input type="radio" name="subscription" checked />
-                  <h3>Single Subscription</h3>
+                  <h4>Single Subscription</h4>
                 </div>
-                <div>$99.99</div>
+                <div>$99.99 <span>$146</span></div>
               </label>
 
               <section class="product_info">
                 <section class="product_choose">
-                  <h3>Choose a Fragrance</h3>
+                  <p>Choose a Fragrance</p>
                   <ul>
                     <li>
                       <label>
@@ -274,7 +276,7 @@
                   </ul>
                 </section>
                 <section class="product_include">
-                  <h3>What’s Included:</h3>
+                  <p>What’s Included:</p>
                   <section class="product_include_items">
                     <section class="product_include_days">
                       <p>Every 30 Days</p>
@@ -291,17 +293,17 @@
                   </section>
                 </section>
                 <ul class="product_desc">
-                  <li>1 bottle shipped monthly</li>
-                  <li>Free Sampler for original, lily and rose fragrances</li>
-                  <li>50% OFF Shipping</li>
-                  <li>Pause or Cancel Anytime after 3 months minimum</li>
-                  <li>28 Day Money Back Guarantee*</li>
+                  <li><i class="fa-solid fa-certificate"></i>1 Bottle Shipped Monthly</li>
+                  <li><i class="fa-solid fa-certificate"></i><strong>Free</strong> Sampler for Original, Lily and Rose Fragrances</li>
+                  <li><i class="fa-solid fa-certificate"></i><strong>50% OFF Shipping</strong></li>
+                  <li><i class="fa-solid fa-certificate"></i>Pause or Cancel Anytime After 3 Months Minimum</li>
+                  <li><i class="fa-solid fa-certificate"></i>28 Day Money Back Guarantee*</li>
                 </ul>
               </section>
             </section>
           </section>
 
-          <!-- single subscription -->
+          <!-- Double subscription -->
           <section class="single_subscription hidden" id="double">
             <section class="product_subs_content">
               <label
@@ -310,14 +312,14 @@
               >
                 <div>
                   <input type="radio" name="subscription" />
-                  <h3>Single Subscription</h3>
+                  <h4>Double Subscription</h4>
                 </div>
-                <div>$99.99</div>
+                <div>$99.99 <span>$146</span></div>
               </label>
 
               <section class="product_info">
                 <section class="product_choose">
-                  <h3>Choose a Fragrance</h3>
+                  <p>Choose a Fragrance</p>
                   <ul>
                     <li>
                       <label>
@@ -358,7 +360,7 @@
                   </ul>
                 </section>
                 <section class="product_include">
-                  <h3>What’s Included:</h3>
+                  <p>What’s Included:</p>
                   <section class="product_include_items">
                     <section class="product_include_days">
                       <p>Every 30 Days</p>
@@ -375,17 +377,17 @@
                   </section>
                 </section>
                 <ul class="product_desc">
-                  <li>1 bottle shipped monthly</li>
-                  <li>Free Sampler for original, lily and rose fragrances</li>
-                  <li>50% OFF Shipping</li>
-                  <li>Pause or Cancel Anytime after 3 months minimum</li>
-                  <li>28 Day Money Back Guarantee*</li>
+                  <li><i class="fa-solid fa-certificate"></i>1 Bottle Shipped Monthly</li>
+                  <li><i class="fa-solid fa-certificate"></i><strong>Free</strong> Sampler for Original, Lily and Rose Fragrances</li>
+                  <li><i class="fa-solid fa-certificate"></i><strong>50% OFF Shipping</strong></li>
+                  <li><i class="fa-solid fa-certificate"></i>Pause or Cancel Anytime After 3 Months Minimum</li>
+                  <li><i class="fa-solid fa-certificate"></i>28 Day Money Back Guarantee*</li>
                 </ul>
               </section>
             </section>
           </section>
 
-          <!-- single subscription -->
+          <!-- Try Once -->
           <section class="single_subscription hidden" id="triple">
             <section class="product_subs_content">
               <label
@@ -394,14 +396,14 @@
               >
                 <div>
                   <input type="radio" name="subscription" />
-                  <h3>Single Subscription</h3>
+                  <h4>Try Once</h4>
                 </div>
-                <div>$99.99</div>
+                <div>$99.99 <span>$146</span></div>
               </label>
 
               <section class="product_info">
                 <section class="product_choose">
-                  <h3>Choose a Fragrance</h3>
+                  <P>Choose a Fragrance</P>
                   <ul>
                     <li>
                       <label>
@@ -442,7 +444,7 @@
                   </ul>
                 </section>
                 <section class="product_include">
-                  <h3>What’s Included:</h3>
+                  <P>What’s Included:</P>
                   <section class="product_include_items">
                     <section class="product_include_days">
                       <p>Every 30 Days</p>
@@ -459,18 +461,20 @@
                   </section>
                 </section>
                 <ul class="product_desc">
-                  <li>1 bottle shipped monthly</li>
-                  <li>Free Sampler for original, lily and rose fragrances</li>
-                  <li>50% OFF Shipping</li>
-                  <li>Pause or Cancel Anytime after 3 months minimum</li>
-                  <li>28 Day Money Back Guarantee*</li>
+                  <li><i class="fa-solid fa-certificate"></i>1 Bottle Shipped Monthly</li>
+                  <li><i class="fa-solid fa-certificate"></i><strong>Free</strong> Sampler for Original, Lily and Rose Fragrances</li>
+                  <li><i class="fa-solid fa-certificate"></i><strong>50% OFF Shipping</strong></li>
+                  <li><i class="fa-solid fa-certificate"></i>Pause or Cancel Anytime After 3 Months Minimum</li>
+                  <li><i class="fa-solid fa-certificate"></i>28 Day Money Back Guarantee*</li>
                 </ul>
               </section>
             </section>
           </section>
         </section>
 
-        <!-- <button class="cta-button">Add to Cart</button> -->
+        <button class="products_btn">
+          <a href="#" class="view_btn">Add to Cart</a>
+        </button>
       </div>
     </div>
     <!-- ends -->
@@ -482,7 +486,7 @@
           <img src="assets/ultimate-picture.png" alt="Perfume Bottle" />
         </div>
         <div class="special_content">
-          <h2>The Ultimate Fragrance</h2>
+          <h2>The Ultimate Best Fragrance</h2>
           <p class="edition">GTG SPECIAL EDITION</p>
           <div class="features_grid">
             <div class="feature_card">
@@ -1010,6 +1014,8 @@
       </div>
     </footer>
     <!-- ends -->
-    <script src="script.js"></script>
+
+    <script src="script.js">  
+    </script>
   </body>
 </html>

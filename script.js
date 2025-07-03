@@ -129,6 +129,48 @@ document.querySelectorAll(".faq_question").forEach((question) => {
 });
 
 //product
+const productGalleryImages = [
+  "sub-product-1.jpg",
+  "sub-product-2.jpg",
+  "sub-product-3.jpg",
+  "sub-product-4.jpg",
+  "sub-product-1.jpg",
+  "sub-product-2.jpg",
+  "sub-product-3.jpg",
+  "sub-product-4.jpg"
+];
+
+let currentProductIndex = 0;
+
+// Update main image based on current index
+function updateMainImage() {
+  const mainImage = document.getElementById("main-image");
+  mainImage.src = "assets/products/" + productGalleryImages[currentProductIndex];
+}
+
+// Left arrow click
+function prevImage() {
+  currentProductIndex = (currentProductIndex - 1 + productGalleryImages.length) % productGalleryImages.length;
+  updateMainImage();
+}
+
+// Right arrow click
+function nextImage() {
+  currentProductIndex = (currentProductIndex + 1) % productGalleryImages.length;
+  updateMainImage();
+}
+
+// When a thumbnail is clicked
+function changeMainImage(imageName) {
+  const mainImage = document.getElementById("main-image");
+  mainImage.src = "assets/products/" + imageName;
+  const foundIndex = productGalleryImages.indexOf(imageName);
+  if (foundIndex !== -1) {
+    currentProductIndex = foundIndex;
+  }
+}
+
+// Handle subscription section switching
 function handleProductContent(selectedId) {
   const allSections = ["single", "double", "triple"];
   allSections.forEach((id) => {
@@ -143,15 +185,7 @@ function handleProductContent(selectedId) {
   });
 }
 
-// product thumblines
-function changeMainImage(imageName) {
-  const mainImage = document.getElementById("main-image");
-  mainImage.src = "assets/products/" + imageName;
-}
-
-//on load
-
-// Call single on page load
+// On page load, show "single" subscription section
 document.addEventListener("DOMContentLoaded", function () {
   handleProductContent("single");
 });
